@@ -16,18 +16,33 @@ const port = process.env.PORT || 5022;
 app.use(cors());
 app.use(bodyParser.json());
 
+// client.connect(err => {
+//   const collection = client.db("bengalDish").collection("mealItems");
+//   // perform actions on the collection object
+
+//   console.log('database connected successfully')
+
+//   // client.close();
+// });
+
+async function run(){
+    try{
+        await client.connect();
+        const itemCollection = client.db("bengalDish").collection('mealItems');
+    }
+    finally{
+
+    }
+}
+
+run().catch(console.dir)
+
+
+
+
 
 app.get('/', (req, res) => {
   res.send('Started Bengal Dish server.........')
 })
-
-client.connect(err => {
-  const collection = client.db("bengalDish").collection("mealItems");
-  // perform actions on the collection object
-
-  console.log('database connected successfully')
-
-  // client.close();
-});
 
 app.listen(port)
