@@ -7,7 +7,11 @@
  * 1.5. create index.js
  * 1.6. use 5 steps to create node server
  * 
- * 
+ * ..................................
+ * CRUD operation 
+ * .........................
+ * 1. Node mongodb CRUD > Fundamentals
+ * 2. create async run function
  * 
  * 
  * 

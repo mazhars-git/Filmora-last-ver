@@ -29,6 +29,14 @@ async function run(){
     try{
         await client.connect();
         const itemCollection = client.db("bengalDish").collection('mealItems');
+
+        app.post('/item', (req, res) =>{
+          
+          const newItem = req.body;
+          console.log('item added:', newItem);
+          res.send('user data received');
+
+        })
     }
     finally{
 
